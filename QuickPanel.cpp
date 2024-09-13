@@ -9,8 +9,8 @@
 #define CURRENT_VERSION "v1.0"
 #define NO_GENSHIN_IMPACT_BOOT_HOTKEY
 //#define SHOWCONSOLE
-//Extra Compile Options:
-//-lgdi32 -lmsimg32 -lwer
+//Extra Compile Options: GCC
+//-mwindows -lgdi32 -lmsimg32 -lwer
 #define DRAGACCEPT
 #define _WIN32_WINNT 0x602
 #define HREPORT void*
@@ -2258,7 +2258,8 @@ void DrawKeyMouseInfo()
 	DeleteObject(hPen);
 }
 void DrawCheats()
-{
+{	//吓人/装逼用的，不用管，想开自己开
+	//真正的还是要去看我写的Jackal Client（目前没开源）
 	static const vector<string> items
 	{
 		"AntiFireball",
@@ -2320,7 +2321,8 @@ void DrawUI()
 	{
 		DrawKeyMouseInfo();
 	}
-	DrawCheats();
+	
+	//DrawCheats();
 	
 	switch(ui_pos)
 	{
